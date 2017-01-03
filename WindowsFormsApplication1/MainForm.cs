@@ -58,7 +58,7 @@ namespace WinWallpaper
             if (res == System.Windows.Forms.DialogResult.OK)
             {
                 string filePath = fileDialog.FileName;
-                this.Text += " ["+filePath+"]";
+                this.Text = "WinWallpaper ["+filePath+"]";
                 if (player != null)
                 {
                     player.Post(MCIPlayer.Cmd.close);
