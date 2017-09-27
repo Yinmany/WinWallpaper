@@ -1,0 +1,26 @@
+﻿<Controls:MetroWindow x:Class="WallpaperApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WallpaperApp"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="动态壁纸" Loaded="Window_Loaded" Width="480" Height="474" ResizeMode="NoResize" MouseDoubleClick="MetroWindow_MouseDoubleClick" Closing="MetroWindow_Closing" Background="White" WindowStartupLocation="CenterScreen" Icon="icon.ico">
+    <Grid>
+        <Border BorderBrush="#CC119EDA" BorderThickness="1" HorizontalAlignment="Left" Height="272" Margin="0" VerticalAlignment="Top" Width="480" Background="Black" MouseDown="Border_MouseDown">
+            <MediaElement x:Name="media" Margin="0" Width="480" Height="272" Volume="1" Source="" MouseDown="media_MouseDown" />
+        </Border>
+        <GroupBox Header="设置" HorizontalAlignment="Left" Height="172" Margin="0,272,-6,0" VerticalAlignment="Top" Width="480">
+            <Grid>
+                <ToggleButton x:Name="btnFull" Margin="96,10,332,99" Foreground="#FF16DCF0" BorderBrush="#FFA8A8A8" Background="#CC119EDA" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="40" Checked="btnFull_Checked" Unchecked="btnFull_Unchecked" RenderTransformOrigin="0.6,-0.76" IsChecked="True"/>
+                <Button Margin="369,94,10,10" Content="设为壁纸" FontFamily="Microsoft YaHei UI" FontSize="12" Click="Button_Click" FontWeight="Normal" Background="#FFD6D6D6" BorderBrush="#00CCCCCC" BorderThickness="0" />
+                <Label Content="壁纸" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="81" Height="25"/>
+                <Slider HorizontalAlignment="Left" Margin="96,67,0,0" VerticalAlignment="Top" Width="80" Height="20" Value="80"/>
+                <Label Content="音量" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="81" Height="25"/>
+                <Button Margin="275,94,104,10" Content="打开" FontFamily="Microsoft YaHei UI" FontSize="12" Click="Button_Click_1" FontWeight="Normal" Background="#FFD6D6D6" BorderBrush="#00CCCCCC" BorderThickness="0" />
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Controls:MetroWindow>

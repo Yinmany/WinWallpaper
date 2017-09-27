@@ -21,34 +21,14 @@ namespace WinWallpaper
 
         private void button1_Click(object sender, EventArgs e)
         {
-            IntPtr HWND = GetWorkerW();
+            IntPtr HWND = WallpaperUtils.GetWorkerW();
             Player(HWND);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
         }
 
-        private IntPtr GetWorkerW()
-        {
-            // 获取
-            IntPtr windowHandle = Win32.User32.FindWindow("Progman", null);
 
-            IntPtr zero = IntPtr.Zero;
-            // 重要消息 生成一个WorkerW 顶级窗口 桌面列表会随之搬家
-            Win32.User32.SendMessageTimeout(windowHandle, 0x52c, new IntPtr(0), IntPtr.Zero, Win32.User32.SendMessageTimeoutFlags.SMTO_NORMAL, 0x3e8, out zero);
-            IntPtr workerw = IntPtr.Zero;
-            // 消息会生成两个WorkerW 顶级窗口 所以要枚举不包含“SHELLDLL_DefView”这个的 WorkerW 窗口 隐藏掉。
-            Win32.User32.EnumWindows(delegate (IntPtr tophandle, IntPtr topparamhandle)
-            {
-                if (Win32.User32.FindWindowEx(tophandle, IntPtr.Zero, "SHELLDLL_DefView", null) != IntPtr.Zero)
-                {
-                    workerw = Win32.User32.FindWindowEx(IntPtr.Zero, tophandle, "WorkerW", null);
-                }
-                return true;
-            }, IntPtr.Zero);
-            Win32.User32.ShowWindow(workerw, Win32.User32.SW_HIDE);
-            return windowHandle;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

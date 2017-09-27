@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinWallpaper", "WindowsFormsApplication1\WinWallpaper.csproj", "{8D78BEC1-D314-42C9-80AC-901A01A9ABE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinWallpaper_Old", "WinWallpaper\WinWallpaper_Old.csproj", "{8D78BEC1-D314-42C9-80AC-901A01A9ABE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallpaperApp", "WallpaperApp\WallpaperApp.csproj", "{B0A81145-712A-4AE9-9708-923B9F713F98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtils", "CommonUtils\CommonUtils.csproj", "{5C3CEF00-75F8-4423-A50F-E9C5D7A07FCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8D78BEC1-D314-42C9-80AC-901A01A9ABE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D78BEC1-D314-42C9-80AC-901A01A9ABE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D78BEC1-D314-42C9-80AC-901A01A9ABE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A81145-712A-4AE9-9708-923B9F713F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A81145-712A-4AE9-9708-923B9F713F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A81145-712A-4AE9-9708-923B9F713F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A81145-712A-4AE9-9708-923B9F713F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3CEF00-75F8-4423-A50F-E9C5D7A07FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3CEF00-75F8-4423-A50F-E9C5D7A07FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3CEF00-75F8-4423-A50F-E9C5D7A07FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3CEF00-75F8-4423-A50F-E9C5D7A07FCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
